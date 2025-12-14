@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome India Tour - Uttarakhand Tour Packages | Best Travel Agency</title>
+    <meta name="description" content="Welcome India Tour - Uttarakhand's premier travel agency offering customized tour packages for Nainital, Mussoorie, Rishikesh, Haridwar, Kedarnath, Badrinath, Auli, and more. Best prices guaranteed!">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: block;
+            margin: 5px 0;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23228B22" width="1200" height="600"/><path fill="%234169E1" d="M0 400 Q300 350 600 400 T1200 400 V600 H0 Z"/><circle fill="%23FFF" cx="200" cy="150" r="40"/><polygon fill="%23FFF" points="400,200 450,300 350,300"/><polygon fill="%23DDD" points="600,150 700,300 500,300"/><polygon fill="%23EEE" points="900,100 1000,300 800,300"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+        }
+        
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,107,107,0.6);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #667eea;
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .package-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .package-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .package-content {
+            padding: 25px;
+        }
+        
+        .package-content h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .package-details {
+            margin: 15px 0;
+            color: #666;
+        }
+        
+        .package-details li {
+            margin: 8px 0;
+            list-style: none;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .package-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .price {
+            font-size: 1.8rem;
+            color: #ff6b6b;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .price small {
+            font-size: 0.9rem;
+            color: #999;
+            text-decoration: line-through;
+        }
+        
+        .book-button {
+            display: block;
+            width: 100%;
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .book-button:hover {
+            background: #5568d3;
+        }
+        
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .destination-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .destination-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+        }
+        
+        .destination-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .destination-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .services {
+            background: #f8f9fa;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .service-item h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .features {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact {
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-item-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .contact-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .header-top {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-info {
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <h1>🏔️ Welcome India Tour</h1>
+                <p>Uttarakhand Tour Specialists</p>
+            </div>
+            <div class="contact-info">
+                <a href="tel:+919876543210">📞 +91-98765-43210</a>
+                <a href="mailto:welcomeindiatours01@gmail.com">✉️ welcomeindiatours01@gmail.com</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Discover the Divine Beauty of Uttarakhand</h2>
+        <p>Experience the Himalayas | Spiritual Journeys | Adventure Tours</p>
+        <a href="#packages" class="cta-button">Explore Tour Packages</a>
+    </section>
+
+    <section class="container" id="packages">
+        <h2 class="section-title">🌟 Featured Uttarakhand Tour Packages</h2>
+        <div class="packages-grid">
+            <div class="package-card">
+                <div class="package-image">🏔️</div>
+                <div class="package-content">
+                    <h3>Nainital - Mussoorie Tour</h3>
+                    <ul class="package-details">
+                        <li>5 Days / 4 Nights</li>
+                        <li>Nainital Lake, Mall Road</li>
+                        <li>Mussoorie - Queen of Hills</li>
+                        <li>Kempty Falls, Gun Hill</li>
+                        <li>Hotel + Transport + Meals</li>
+                    </ul>
+                    <div class="price">
+                        <small>₹15,999</small> ₹11,999/person
+                    </div>
+                    <a href="mailto:welcomeindiatours01@gmail.com?subject=Booking: Nainital-Mussoorie Tour" class="book-button">Book Now</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">🕉️</div>
+                <div class="package-content">
+                    <h3>Char Dham Yatra</h3>
+                    <ul class="package-details">
+                        <li>10 Days / 9 Nights</li>
+                        <li>Yamunotri, Gangotri</li>
+                        <li>Kedarnath, Badrinath</li>
+                        <li>Haridwar, Rishikesh</li>
+                        <li>Complete Spiritual Journey</li>
+                    </ul>
+                    <div class="price">
+                        <small>₹35,999</small> ₹28,999/person
+                    </div>
+                    <a href="mailto:welcomeindiatours01@gmail.com?subject=Booking: Char Dham Yatra" class="book-button">Book Now</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">⛷️</div>
+                <div class="package-content">
+                    <h3>Auli Adventure Package</h3>
+                    <ul class="package-details">
+                        <li>4 Days / 3 Nights</li>
+                        <li>Skiing & Cable Car Ride</li>
+                        <li>Joshimath, Auli</li>
+                        <li>Snow Activities</li>
+                        <li>Adventure Sports Included</li>
+                    </ul>
+                    <div class="price">
+                        <small>₹18,999</small> ₹14,999/person
+                    </div>
+                    <a href="mailto:welcomeindiatours01@gmail.com?subject=Booking: Auli Adventure" class="book-button">Book Now</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">🌊</div>
+                <div class="package-content">
+                    <h3>Rishikesh - Haridwar Tour</h3>
+                    <ul class="package-details">
+                        <li>3 Days / 2 Nights</li>
+                        <li>River Rafting in Rishikesh</li>
+                        <li>Ganga Aarti at Har Ki Pauri</li>
+                        <li>Lakshman Jhula, Ram Jhula</li>
+                        <li>Yoga & Meditation Sessions</li>
+                    </ul>
+                    <div class="price">
+                        <small>₹9,999</small> ₹6,999/person
+                    </div>
+                    <a href="mailto:welcomeindiatours01@gmail.com?subject=Booking: Rishikesh-Haridwar Tour" class="book-button">Book Now</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">🌸</div>
+                <div class="package-content">
+                    <h3>Valley of Flowers Trek</h3>
+                    <ul class="package-details">
+                        <li>6 Days / 5 Nights</li>
+                        <li>UNESCO World Heritage Site</li>
+                        <li>Hemkund Sahib</li>
+                        <li>Guided Trekking</li>
+                        <li>Alpine Flowers & Wildlife</li>
+                    </ul>
+                    <div class="price">
+                        <small>₹22,999</small> ₹17,999/person
+                    </div>
+                    <a href="mailto:welcomeindiatours01@gmail.com?subject=Booking: Valley of Flowers" class="book-button">Book Now</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">🐅</div>
+                <div class="package-content">
+                    <h3>Jim Corbett Wildlife Safari</h3>
+                    <ul class="package-details">
+                        <li>3 Days / 2 Nights</li>
+                        <li>Jungle Safari (2 Times)</li>
+                        <li>Tiger Reserve Visit</li>
+                        <li>Corbett Museum</li>
+                        <li>Wildlife Photography</li>
+                    </ul>
+                    <div class="price">
+                        <small>₹13,999</small> ₹9,999/person
+                    </div>
+                    <a href="mailto:welcomeindiatours01@gmail.com?subject=Booking: Jim Corbett Safari" class="book-button">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">📍 Popular Uttarakhand Destinations</h2>
+        <div class="destinations-grid">
+            <div class="destination-card">
+                <div class="destination-icon">🏞️</div>
+                <h3>Nainital</h3>
+                <p>Beautiful lake city with scenic views</p>
+            </div>
+            <div class="destination-card">
+                <div class="destination-icon">🏔️</div>
+                <h3>Mussoorie</h3>
+                <p>Queen of Hills with stunning landscapes</p>
+            </div>
+            <div class="destination-card">
+                <div class="destination-icon">🕉️</div>
+                <h3>Haridwar</h3>
+                <p>Holy city on banks of Ganga</p>
+            </div>
+            <div class="destination-card">
+                <div class="destination-icon">🧘</div>
+                <h3>Rishikesh</h3>
+                <p>Yoga capital & adventure hub</p>
+            </div>
+            <div class="destination-card">
+                <div class="destination-icon">⛰️</div>
+                <h3>Kedarnath</h3>
+                <p>Sacred Jyotirlinga temple</p>
+            </div>
+            <div class="destination-card">
+                <div class="destination-icon">🛕</div>
+                <h3>Badrinath</h3>
+                <p>Char Dham pilgrimage site</p>
+            </div>
+            <div class="destination-card">
+                <div class="destination-icon">⛷️</div>
+                <h3>Auli</h3>
+                <p>Premier skiing destination</p>
+            </div>
+            <div class="destination-card">
+                <div class="destination-icon">🌲</div>
+                <h3>Ranikhet</h3>
+                <p>Peaceful hill station</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">🎯 Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">🚗</div>
+                    <h3>Transport Services</h3>
+                    <p>Comfortable AC vehicles with experienced drivers</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🏨</div>
+                    <h3>Hotel Bookings</h3>
+                    <p>Best hotels at prime locations</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🎫</div>
+                    <h3>Tour Packages</h3>
+                    <p>Customized packages for all</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🗺️</div>
+                    <h3>Tour Guide</h3>
+                    <p>Experienced local guides</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🎿</div>
+                    <h3>Adventure Activities</h3>
+                    <p>Trekking, rafting, skiing & more</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">📸</div>
+                    <h3>Photography Tours</h3>
+                    <p>Special packages for photographers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">✨ Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive rates, no hidden charges</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Expert Team</h3>
+                    <p>Experienced travel professionals</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Safe & Secure</h3>
+                    <p>Your safety is our priority</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Customizable</h3>
+                    <p>Tailor-made packages</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📞</div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock assistance</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Customer Satisfaction</h3>
+                    <p>1000+ happy customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">📞 Contact Us</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Ready to explore Uttarakhand? Get in touch today!</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <div class="contact-item-icon">📱</div>
+                    <h3>Phone</h3>
+                    <a href="tel:+919876543210">+91-98765-43210</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">✉️</div>
+                    <h3>Email</h3>
+                    <a href="mailto:welcomeindiatours01@gmail.com">welcomeindiatours01@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📍</div>
+                    <h3>Office</h3>
+                    <p>Uttarakhand, India</p>
+                    <p>Open: Mon-Sun (9 AM - 8 PM)</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/919876543210">Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Welcome India Tour - All Rights Reserved</p>
+        <p>Your Trusted Partner for Uttarakhand Tourism</p>
+        <p>🏔️ Explore • Experience • Enjoy 🏔️</p>
+    </footer>
+</body>
+</html>
